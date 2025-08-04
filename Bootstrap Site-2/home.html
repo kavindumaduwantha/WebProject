@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PureLeaf Market</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+
+  <style>
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .carousel-inner img {
+      height: 500px;
+      object-fit: cover;
+    }
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+    .navbar-brand img {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
+    .navbar .nav-link {
+      color: white !important;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+    .navbar .nav-link:hover {
+      text-decoration: underline;
+    }
+    .navbar-brand span {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark d-flex justify-content-between align-items-center px-4">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/logo.png" class="d-inline-block align-top" alt="Logo" />
+      <span>PureLeaf Market</span>
+    </a>
+    <div class="d-flex align-items-center">
+      <a class="nav-link" href="home.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="gallery.html">Gallery</a>
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <div id="teaCarousel" class="carousel slide" data-ride="carousel" data-interval="1500">
+    <ol class="carousel-indicators">
+      <li data-target="#teaCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#teaCarousel" data-slide-to="1"></li>
+      <li data-target="#teaCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/tea1.jpg" class="d-block w-100" alt="Tea 1" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Ceylon's Heritage</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/tea2.jpg" class="d-block w-100" alt="Tea 2" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Flavors That Warm the Soul</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/tea3.jpg" class="d-block w-100" alt="Tea 3" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Tradition Brewed into Every Sip</h5>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#teaCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#teaCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div class="container text-center mt-5">
+    <h1>Explore Our Premium Tea Brands</h1>
+    <p>Curated selections from the finest names in Ceylon Tea</p>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="images/brand1.jpg" class="card-img-top" alt="Dilmah">
+          <div class="card-body">
+            <h5 class="card-title">Dilmah</h5>
+            <p class="card-text">Authentic Ceylon tea packed fresh from the source. A global favorite for generations.</p>
+            <a href="#" class="btn btn-success">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="images/brand2.jpg" class="card-img-top" alt="Zesta">
+          <div class="card-body">
+            <h5 class="card-title">Zesta</h5>
+            <p class="card-text">Premium handpicked leaves from Sri Lanka’s best tea gardens. Smooth, elegant, and refreshing.</p>
+            <a href="#" class="btn btn-success">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="images/brand3.png" class="card-img-top" alt="Lipton">
+          <div class="card-body">
+            <h5 class="card-title">Lipton</h5>
+            <p class="card-text">Globally trusted and always fresh. Enjoy every moment with Lipton's signature blends.</p>
+            <a href="#" class="btn btn-success">Buy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h3 class="mb-4 text-center">FAQs & Tea Tips</h3>
+    <div class="accordion" id="teaAccordion">
+
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+              Why Ceylon Tea?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#teaAccordion">
+          <div class="card-body">
+            Ceylon tea is renowned for its unmatched aroma, taste, and quality. Grown in Sri Lanka’s ideal climate, it offers a range of flavors from brisk and citrusy to full-bodied and bold.
+            <br><strong>Starting from: 1200 LKR</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+              How to Brew the Perfect Cup?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#teaAccordion">
+          <div class="card-body">
+            Use fresh boiling water, steep for 3–5 minutes based on taste, and always store tea in a cool, dry place to preserve flavor.
+            <br><strong>Brewing Kit: 950 LKR</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+              Shipping & Delivery Info
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#teaAccordion">
+          <div class="card-body">
+            We ship worldwide within 5–10 business days. Orders above <strong>5000 LKR</strong> receive free standard shipping. Express options available at checkout.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row text-center text-md-left">
+        <div class="col-md-6">
+          &copy; 2025 PureLeaf Market
+        </div>
+        <div class="col-md-6 text-md-right">
+          Pawan - Group Z
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us – PureLeaf Market</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+
+  <style>
+    .contact-option img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      margin-right: 8px;
+    }
+
+    .contact-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .contact-form button {
+      width: 100%;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 30px;
+    }
+
+    .note a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .note a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark d-flex justify-content-between align-items-center px-4">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/logo.png" class="d-inline-block align-top" alt="Logo" width="40" height="40" />
+      <span class="ml-2 text-white font-weight-bold">PureLeaf Market</span>
+    </a>
+    <div class="d-flex align-items-center">
+      <a class="nav-link" href="home.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="gallery.html">Gallery</a>
+      <a class="nav-link" href="products.html">Products</a>
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2 class="text-center mt-5">Contact Us</h2>
+    <p class="text-center mb-4">We’d love to hear from you! Choose your preferred contact method below.</p>
+
+    <div class="contact-form">
+      <form>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Type your name here..." required />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Send via</label>
+          <div class="contact-option">
+            <input type="radio" id="gmail" name="contact" value="gmail" checked />
+            <label for="gmail" class="ml-2">
+              <img src="images/gmail.png" alt="Gmail" /> Gmail
+            </label>
+          </div>
+          <div class="contact-option">
+            <input type="radio" id="whatsapp" name="contact" value="whatsapp" />
+            <label for="whatsapp" class="ml-2">
+              <img src="images/whatsapp.png" alt="WhatsApp" /> WhatsApp
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+
+    
+
+  <footer class="bg-dark text-white py-3 mt-5">
+    <div class="container text-center">
+      &copy; 2025 PureLeaf Market
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+      const contactMethod = document.querySelector('input[name="contact"]:checked').value;
+
+      if (contactMethod === 'gmail') {
+        const mailto = `mailto:pawanprabhashana11@gmail.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+        window.location.href = mailto;
+      } else if (contactMethod === 'whatsapp') {
+        const whatsappURL = `https://wa.me/94718159949?text=${encodeURIComponent(`Name: ${name}\nMessage: ${message}`)}`;
+        window.open(whatsappURL, '_blank');
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
